@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Trail API</title>
+    <title>Connection Native</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom css -->
@@ -36,6 +36,7 @@
             states[Connection.NONE]     = 'No network connection';
 
             alert('Connection type: ' + states[networkState]);
+
         }
 
     </script>
@@ -45,7 +46,7 @@
     <div class="container-fluid">
       <div class="header">
                 <ul class="nav nav-pills">
-                  <li class="active"><a href="index.html">Home</a></li>
+                  <li><a href="index.html">Home</a></li>
                   <li><a href="instagramapi.html">Instagram API</a></li>
                   <li><a href="sunlightapi.html">Sunlight API</a></li>
                 </ul>
@@ -55,8 +56,8 @@
         
       
       <!-- populate div with data from api -->
-      <div>
-        <p>A dialog box will report the network state.</p>
+      <div class="well colortext"> 
+        <p id="myLocation">You are connected to...</p>
       </div>
 
       </div><!-- end col -->
@@ -66,7 +67,5 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- bootstrap, index.js -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
-    
   </body>
 </html>

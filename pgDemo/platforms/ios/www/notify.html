@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Trail API</title>
+    <title>Notification Native</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom css -->
@@ -12,31 +12,31 @@
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
 
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
+      // Wait for device API libraries to load
+      //
+      document.addEventListener("deviceready", onDeviceReady, false);
 
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        // Empty
-    }
+      // device APIs are available
+      //
+      function onDeviceReady() {
+          // Empty
+      }
 
-    // alert dialog dismissed
-        function alertDismissed() {
-            // do something
-        }
+      // alert dialog dismissed
+          function alertDismissed() {
+              // do something
+          }
 
-    // Show a custom alertDismissed
-    //
-    function showAlert() {
-        navigator.notification.alert(
-            'You are the winner!',  // message
-            alertDismissed,         // callback
-            'Game Over',            // title
-            'Done'                  // buttonName
-        );
-    }
+      // Show a custom alertDismissed
+      //
+      function showAlert() {
+          navigator.notification.alert(
+              'Still trying to figure this one out',  // message
+              alertDismissed,         // callback
+              'I have one more week',            // title
+              'Dismiss'                  // buttonName
+          );
+      }
 
     </script>
   </head>
@@ -45,18 +45,18 @@
     <div class="container-fluid">
       <div class="header">
                 <ul class="nav nav-pills">
-                  <li class="active"><a href="index.html">Home</a></li>
+                  <li><a href="index.html">Home</a></li>
                   <li><a href="instagramapi.html">Instagram API</a></li>
                   <li><a href="sunlightapi.html">Sunlight API</a></li>
                 </ul>
               </div>
       <div class="col-sm-12 col-md-12">
-        <h1 class="page-header">Acel <small>Native</small></h1>
+        <h1 class="page-header">Notification <small>Native</small></h1>
         
       
       <!-- populate div with data from api -->
-      <div id="trails"></div>
-        <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+      <div></div>
+        <a href="#" onclick="showAlert(); return false;"><button class="btn btn-primary">Tap to Notify Me!</button></a>
       </div><!-- end col -->
     </div><!-- end container -->
 
@@ -64,7 +64,5 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- bootstrap, and index.js -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
-    
   </body>
 </html>

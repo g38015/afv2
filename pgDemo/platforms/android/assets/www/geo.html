@@ -12,36 +12,28 @@
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
 
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
+      // Load API Library
+      document.addEventListener("deviceready", onDeviceReady, false);
 
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    }
+      // device APIs are available
+      function onDeviceReady() {
+          navigator.geolocation.getCurrentPosition(getSuccess, getError);
+      }
 
-    // onSuccess Geolocation
-    //
-    function onSuccess(position) {
-        var element = document.getElementById('geolocation');
-        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-                            'Longitude: '          + position.coords.longitude             + '<br />' +
-                            'Altitude: '           + position.coords.altitude              + '<br />' +
-                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
-                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-                            'Heading: '            + position.coords.heading               + '<br />' +
-                            'Speed: '              + position.coords.speed                 + '<br />' +
-                            'Timestamp: '          + position.timestamp                    + '<br />';
-    }
+      // Geolocation
+      function getSuccess(location) {
+          var element = document.getElementById('myLocation');
+          element.innerHTML = 'Latitude: ' + location.coords.latitude + '<br />' +
+                              'Longitude: ' + location.coords.longitude + '<br />' +
+                              'Altitude: ' + location.coords.altitude + '<br />';
+      }
 
-    // onError Callback receives a PositionError object
-    //
-    function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
-    }
+      // Error Callback receives a PositionError object
+      function getError(e) {
+
+          alert('code: ' + e.code + '\n' +
+                'message: ' + e.message + '\n');
+      }
 
     </script>
   </head>
@@ -50,28 +42,27 @@
     <div class="container-fluid">
       <div class="header">
                 <ul class="nav nav-pills">
-                  <li class="active"><a href="index.html">Home</a></li>
+                  <li><a href="index.html">Home</a></li>
                   <li><a href="instagramapi.html">Instagram API</a></li>
                   <li><a href="sunlightapi.html">Sunlight API</a></li>
                 </ul>
               </div>
       <div class="col-sm-12 col-md-12">
-        <h1 class="page-header">Geo Location <small>Native</small></h1>
+        <h1 class="page-header">GeoLocation <small>Native</small></h1>
         
       
       <!-- populate div with data from api -->
-      <div>
-        <p id="geolocation">Finding geolocation...</p>
-      </div>
-
+        <div class="well colortext">
+          <h1>My Curent Location:</h1>
+            <p id="myLocation">Getting Location...</p>
+        </div>
+  
       </div><!-- end col -->
     </div><!-- end container -->
 
     <!-- jQuery -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <!-- bootstrap, index.js -->
+    <!-- bootstrap -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
-    
   </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Trail API</title>
+    <title>Acceleration</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom css -->
@@ -12,30 +12,31 @@
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
 
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
+      // Wait for device API libraries to load
+      //
+      document.addEventListener("deviceready", onDeviceReady, false);
 
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
-    }
+      // device APIs are available
+      //
+      function onDeviceReady() {
+          navigator.accelerometer.getCurrentAcceleration(getSuccess, getError);
+      }
 
-    // onSuccess: Get a snapshot of the current acceleration
-    //
-    function onSuccess(acceleration) {
-        alert('Acceleration X: ' + acceleration.x + '\n' +
-              'Acceleration Y: ' + acceleration.y + '\n' +
-              'Acceleration Z: ' + acceleration.z + '\n' +
-              'Timestamp: '      + acceleration.timestamp + '\n');
-    }
+      // onSuccess: Get a snapshot of the current acceleration
+      //
+      function getSuccess(a) {
 
-    // onError: Failed to get the acceleration
-    //
-    function onError() {
-        alert('onError!');
-    }
+          var changehtml = document.getElementById('myAcceleration');
+          changehtml.innerHTML = 'Accel X: ' + a.x + '<br />' +
+                              'Accel Y: ' + a.y + '<br />' +
+                              'Accel Z: ' + a.z + '<br />';
+      }
+
+      // onError: Failed to get the acceleration
+      //
+      function getError() {
+          alert('Error!');
+      }
 
     </script>
   </head>
@@ -44,18 +45,16 @@
     <div class="container-fluid">
       <div class="header">
                 <ul class="nav nav-pills">
-                  <li class="active"><a href="index.html">Home</a></li>
+                  <li><a href="index.html">Home</a></li>
                   <li><a href="instagramapi.html">Instagram API</a></li>
                   <li><a href="sunlightapi.html">Sunlight API</a></li>
                 </ul>
               </div>
       <div class="col-sm-12 col-md-12">
-        <h1 class="page-header">Acel <small>Native</small></h1>
-        
-      
+        <h1 class="page-header">Accelerometer <small>Native</small></h1>
       <!-- populate div with data from api -->
-      <div id="trails"></div>
-        <p>getCurrentAcceleration</p>
+      <div class="well colortext">
+        <p id="myAcceleration">Getting Acceleration...</p>
       </div><!-- end col -->
     </div><!-- end container -->
 
@@ -63,6 +62,5 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- bootstrap, index.js -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
   </body>
 </html>
