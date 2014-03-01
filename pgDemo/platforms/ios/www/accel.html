@@ -10,57 +10,34 @@
     <!-- Custom css -->
     <link href="css/main.css" rel="stylesheet">
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-      // Wait for device API libraries to load
-      //
-      document.addEventListener("deviceready", onDeviceReady, false);
-
-      // device APIs are available
-      //
-      function onDeviceReady() {
-          navigator.accelerometer.getCurrentAcceleration(getSuccess, getError);
-      }
-
-      // onSuccess: Get a snapshot of the current acceleration
-      //
-      function getSuccess(a) {
-
-          var changehtml = document.getElementById('myAcceleration');
-          changehtml.innerHTML = 'Accel X: ' + a.x + '<br />' +
-                              'Accel Y: ' + a.y + '<br />' +
-                              'Accel Z: ' + a.z + '<br />';
-      }
-
-      // onError: Failed to get the acceleration
-      //
-      function getError() {
-          alert('Error!');
-      }
-
-    </script>
   </head>
   <body>
-
     <div class="container-fluid">
       <div class="header">
-                <ul class="nav nav-pills">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="instagramapi.html">Instagram API</a></li>
-                  <li><a href="sunlightapi.html">Sunlight API</a></li>
-                </ul>
-              </div>
+        <ul class="nav nav-pills">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="instagramapi.html">Instagram API</a></li>
+          <li><a href="sunlightapi.html">Sunlight API</a></li>
+        </ul>
+      </div>
       <div class="col-sm-12 col-md-12">
         <h1 class="page-header">Accelerometer <small>Native</small></h1>
       <!-- populate div with data from api -->
-      <div class="well colortext">
-        <p id="myAcceleration">Getting Acceleration...</p>
-      </div><!-- end col -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Acceleration</h3>
+        </div>
+        <div id="myAcceleration" class="panel-body colortext">
+          <p>Getting Acceleration...</p>
+        </div>
+      </div>
+      </div>
     </div><!-- end container -->
 
     <!-- jQuery -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- bootstrap, index.js -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/accel.js"></script>
   </body>
 </html>

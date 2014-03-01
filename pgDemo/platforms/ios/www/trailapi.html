@@ -15,16 +15,16 @@
 
     <div class="container-fluid">
       <div class="header">
-                <ul class="nav nav-pills">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="instagramapi.html">Instagram API</a></li>
-                  <li><a href="sunlightapi.html">Sunlight API</a></li>
-                </ul>
-              </div>
+        <ul class="nav nav-pills">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="instagramapi.html">Instagram API</a></li>
+          <li><a href="sunlightapi.html">Sunlight API</a></li>
+        </ul>
+      </div>
       <div class="col-sm-12 col-md-12">
         <h1 class="page-header">Trail <small>API</small></h1>
         <!-- form to get city -->
-        <form action="" id="trail-lookup" class="form-inline" role="form">
+        <form id="trail-lookup" class="form-inline" role="form">
           <div class="input-group">
             <input type="text" id="getCity" name="getCity" required class="form-control" placeholder="Enter City" />
             <span class="input-group-btn">
@@ -34,10 +34,10 @@
         </form><br />
       
       <!-- populate div with data from api -->
-      <div id="trails"></div>
+        <div id="trails">
+        </div>
 
       </div><!-- end col -->
-
     </div><!-- end container -->
 
     <!-- jQuery -->

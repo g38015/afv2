@@ -10,56 +10,22 @@
     <!-- Custom css -->
     <link href="css/main.css" rel="stylesheet">
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-     <script type="text/javascript" charset="utf-8">
-
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        checkConnection();
-    }
-
-        function checkConnection() {
-            var networkState = navigator.connection.type;
-
-            var states = {};
-            states[Connection.UNKNOWN]  = 'Unknown connection';
-            states[Connection.ETHERNET] = 'Ethernet connection';
-            states[Connection.WIFI]     = 'WiFi connection';
-            states[Connection.CELL_2G]  = 'Cell 2G connection';
-            states[Connection.CELL_3G]  = 'Cell 3G connection';
-            states[Connection.CELL_4G]  = 'Cell 4G connection';
-            states[Connection.CELL]     = 'Cell generic connection';
-            states[Connection.NONE]     = 'No network connection';
-
-            alert('Connection type: ' + states[networkState]);
-
-        }
-
-    </script>
   </head>
   <body>
-
     <div class="container-fluid">
       <div class="header">
-                <ul class="nav nav-pills">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="instagramapi.html">Instagram API</a></li>
-                  <li><a href="sunlightapi.html">Sunlight API</a></li>
-                </ul>
-              </div>
+        <ul class="nav nav-pills">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="instagramapi.html">Instagram API</a></li>
+          <li><a href="sunlightapi.html">Sunlight API</a></li>
+        </ul>
+      </div>
       <div class="col-sm-12 col-md-12">
         <h1 class="page-header">Connection <small>Native</small></h1>
-        
-      
-      <!-- populate div with data from api -->
-      <div class="well colortext"> 
-        <p id="myLocation">You are connected to...</p>
-      </div>
-
+        <!-- populate div with data from api -->
+        <div class="well colortext"> 
+          <p id="myLocation">You are connected to...</p>
+        </div>
       </div><!-- end col -->
     </div><!-- end container -->
 
@@ -67,5 +33,6 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- bootstrap, index.js -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/connection.js"></script>
   </body>
 </html>

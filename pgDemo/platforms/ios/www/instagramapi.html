@@ -8,30 +8,30 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom css -->
     <link href="css/main.css" rel="stylesheet">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
   </head>
   <body>
-
     <div class="container-fluid">
       <div class="header">
-                <ul class="nav nav-pills">
-                  <li><a href="index.html">Home</a></li>
-                  <li class="active"><a href="instagramapi.html">Instagram API</a></li>
-                  <li><a href="sunlightapi.html">Sunlight API</a></li>
-                </ul>
-              </div>
+        <ul class="nav nav-pills">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="instagramapi.html">Instagram API</a></li>
+          <li><a href="sunlightapi.html">Sunlight API</a></li>
+        </ul>
+      </div>
       <div class="col-sm-12 col-md-12">
         <h1 class="page-header">Instagram <small>API</small></h1>
           
-          <!-- form capture # search -->
-          <form action="" id="apicapture" class="form-inline" role="form">
-            <div class="input-group">
-              <span class="input-group-addon">#</span>
-                <input type="text" id="tag" name="tag" class="form-control" placeholder="Please enter tag" required />
-              <span class="input-group-btn">
-                <button class="btn btn-primary" type="submit" id="btn-lookup"><span class='glyphicon glyphicon-search'></span></button>
-                </span>
-            </div>
-          </form><br /><!-- end form -->
+        <!-- form capture # search -->
+        <form id="apicapture" class="form-inline" role="form">
+          <div class="input-group">
+            <span class="input-group-addon">#</span>
+              <input type="text" id="tag" name="tag" class="form-control" placeholder="Please enter tag" required />
+            <span class="input-group-btn">
+              <button class="btn btn-primary" type="submit" id="btn-lookup"><span class='glyphicon glyphicon-search'></span></button>
+            </span>
+          </div>
+        </form><br /><!-- end form -->
 
         <!-- populate with instagram data -->
         <div id="apidata" class="row dashimage">
@@ -45,6 +45,6 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- bootstrap and instagram js -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/instagramapi.js"></script>
+    <script src="js/inst.js"></script>
   </body>
 </html>

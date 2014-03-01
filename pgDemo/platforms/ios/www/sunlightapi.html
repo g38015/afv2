@@ -9,37 +9,31 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom css -->
     <link href="css/main.css" rel="stylesheet">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    
   </head>
   <body>
-
-    <div class="container-fluid">
-              
-              <div class="header">
-                <ul class="nav nav-pills">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="instagramapi.html">Instagram API</a></li>
-                  <li class="active"><a href="sunlightapi.html">Sunlight API</a></li>
-                </ul>
-              </div>
-                
-                <div class="col-sm-12 col-md-12">
-                  <h1 class="page-header">Sunlight Congress <small>API</small></h1>
-
-                    <form action="" id="locate" class="form-inline" role="form">
-                    <div class="input-group">
-                      <!-- <label for="txt-zip"></label> -->
-                      <input type="text" id="locateZip" name="zip" required class="form-control" placeholder="Please enter zip code to locate your representative" />
-                      <span class="input-group-btn">
-                        <button class="btn btn-primary" type="submit" id="btn-lookup"><span class='glyphicon glyphicon-search'></span></button>
-                      </span>
-                    </div>
-                  </form><br />
-
-                <div id="rep" class="row dashimage">
-                </div>
-              </div>
-            
-
+    <div class="container-fluid"> 
+      <div class="header">
+        <ul class="nav nav-pills">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="instagramapi.html">Instagram API</a></li>
+          <li class="active"><a href="sunlightapi.html">Sunlight API</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-12 col-md-12">
+        <h1 class="page-header">Sunlight Congress <small>API</small></h1>
+        <form id="locate" class="form-inline" role="form">
+          <div class="input-group">
+            <input type="text" id="locateZip" name="zip" required class="form-control" placeholder="Please enter zip code to locate your representative" />
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit" id="btn-lookup"><span class='glyphicon glyphicon-search'></span></button>
+              </span>
+          </div>
+        </form><br />
+        <div id="rep" class="row dashimage">
+        </div>
+      </div><!-- end column -->
     </div><!-- end container -->
 
     <!-- jQuery -->

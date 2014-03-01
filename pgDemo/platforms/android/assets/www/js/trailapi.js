@@ -19,15 +19,19 @@ $(document).ready(function() {
 			$.each(data.places, function(index, activity){
 
   				 trail =  "<div <div class='col-xs-24 col-sm-12'>" +
-                    "<div class='thumbnail'>" +
-                    
-                    "<div class='caption'>" +
-                    "<h4>" + activity.name + "</h4>" +
-                    "<h4>" + activity.city + "</h4>" +
+                    "<div class='panel panel-primary'>" +
+                    "<div class='panel-heading'>" +
+                    "<h3 class='panel-title'>" + activity.name + "</h3>" +
+                    "</div>" +
+                    "<div class='panel-body colortext'>" +
+                    "<h4>City: " + activity.city + "</h4>" +
                     "<h4>Description:</h4>" +
                     "<p>" + activity.description + "</p>" +
                     "<h4>Directions</h4>" +
                     "<p>" + activity.directions + "</p>" +
+                    "<p>" + activity.lat + "</p>" +
+                    "<p>" + activity.lon + "</p>" +
+                    "<button class='btn btn-primary'>Map Me!</button>" +
                     "</div>" +
                     "</div>" +
                     "</div>";

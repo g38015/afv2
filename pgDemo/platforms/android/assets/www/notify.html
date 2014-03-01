@@ -10,53 +10,22 @@
     <!-- Custom css -->
     <link href="css/main.css" rel="stylesheet">
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-      // Wait for device API libraries to load
-      //
-      document.addEventListener("deviceready", onDeviceReady, false);
-
-      // device APIs are available
-      //
-      function onDeviceReady() {
-          // Empty
-      }
-
-      // alert dialog dismissed
-          function alertDismissed() {
-              // do something
-          }
-
-      // Show a custom alertDismissed
-      //
-      function showAlert() {
-          navigator.notification.alert(
-              'Still trying to figure this one out',  // message
-              alertDismissed,         // callback
-              'I have one more week',            // title
-              'Dismiss'                  // buttonName
-          );
-      }
-
-    </script>
   </head>
   <body>
-
     <div class="container-fluid">
       <div class="header">
-                <ul class="nav nav-pills">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="instagramapi.html">Instagram API</a></li>
-                  <li><a href="sunlightapi.html">Sunlight API</a></li>
-                </ul>
-              </div>
+        <ul class="nav nav-pills">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="instagramapi.html">Instagram API</a></li>
+          <li><a href="sunlightapi.html">Sunlight API</a></li>
+        </ul>
+      </div>
       <div class="col-sm-12 col-md-12">
         <h1 class="page-header">Notification <small>Native</small></h1>
-        
-      
       <!-- populate div with data from api -->
-      <div></div>
-        <a href="#" onclick="showAlert(); return false;"><button class="btn btn-primary">Tap to Notify Me!</button></a>
+      <div>
+        <a class="btn btn-primary" href="" onclick="showAlert(); return false;"></a>
+      </div>
       </div><!-- end col -->
     </div><!-- end container -->
 
@@ -64,5 +33,6 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- bootstrap, and index.js -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/notify.js"></script>
   </body>
 </html>

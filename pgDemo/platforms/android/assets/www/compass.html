@@ -10,55 +10,33 @@
     <!-- Custom css -->
     <link href="css/main.css" rel="stylesheet">
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-      // Wait for device API libraries to load
-      //
-      document.addEventListener("deviceready", onDeviceReady, false);
-
-      // device APIs are available
-      //
-      function onDeviceReady() {
-          navigator.compass.getCurrentHeading(onSuccess, onError);
-      }
-
-      // onSuccess: Get the current heading
-      //
-      function onSuccess(h) {
-          //alert('Heading: ' + heading.magneticHeading);
-
-          var changehtml = document.getElementById('heading');
-          changehtml.innerHTML = 'Heading: ' + h.magneticHeading + '<br />';
-      }
-
-      // onError: Failed to get the heading
-      //
-      function onError(compassError) {
-          alert('Compass Error: ' + compassError.code);
-      }
-
-    </script>
   </head>
   <body>
-
     <div class="container-fluid">
       <div class="header">
-                <ul class="nav nav-pills">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="instagramapi.html">Instagram API</a></li>
-                  <li><a href="sunlightapi.html">Sunlight API</a></li>
-                </ul>
-              </div>
+        <ul class="nav nav-pills">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="instagramapi.html">Instagram API</a></li>
+          <li><a href="sunlightapi.html">Sunlight API</a></li>
+        </ul>
+      </div>
       <div class="col-sm-12 col-md-12">
         <h1 class="page-header">Compass <small>Native</small></h1>
-      <div class="well colortext">
-        <p id="heading">My heading is...</p>
-      </div><!-- end col -->
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">My Heading</h3>
+          </div>
+          <div id="heading" class="panel-body colortext">
+            <p>My heading is...</p>
+          </div>
+        </div>
+      </div>
     </div><!-- end container -->
 
     <!-- jQuery -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- bootstrap, index.js -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/compass.js"></script>
   </body>
 </html>

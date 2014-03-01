@@ -11,6 +11,8 @@ $(document).ready(function() {
 
   		$.getJSON(url, function(apidata) {
 
+        console.log(apidata);
+
   			// looping through each item in the returned data
   			$.each(apidata.data, function(i, image){
 
@@ -22,6 +24,8 @@ $(document).ready(function() {
   				 		 "</div>";
 
   				$results.append(image);
+
+        
 
   			}); // end each
   		}); // end getJSON

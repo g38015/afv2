@@ -10,59 +10,35 @@
     <!-- Custom css -->
     <link href="css/main.css" rel="stylesheet">
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-      // Load API Library
-      document.addEventListener("deviceready", onDeviceReady, false);
-
-      // device APIs are available
-      function onDeviceReady() {
-          navigator.geolocation.getCurrentPosition(getSuccess, getError);
-      }
-
-      // Geolocation
-      function getSuccess(location) {
-          var element = document.getElementById('myLocation');
-          element.innerHTML = 'Latitude: ' + location.coords.latitude + '<br />' +
-                              'Longitude: ' + location.coords.longitude + '<br />' +
-                              'Altitude: ' + location.coords.altitude + '<br />';
-      }
-
-      // Error Callback receives a PositionError object
-      function getError(e) {
-
-          alert('code: ' + e.code + '\n' +
-                'message: ' + e.message + '\n');
-      }
-
-    </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBS_dNBj2epkxX8N9bR1zxNkjYRPKCuBDo&sensor=true"></script>
   </head>
   <body>
-
     <div class="container-fluid">
       <div class="header">
-                <ul class="nav nav-pills">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="instagramapi.html">Instagram API</a></li>
-                  <li><a href="sunlightapi.html">Sunlight API</a></li>
-                </ul>
-              </div>
+        <ul class="nav nav-pills">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="instagramapi.html">Instagram API</a></li>
+          <li><a href="sunlightapi.html">Sunlight API</a></li>
+        </ul>
+      </div>
       <div class="col-sm-12 col-md-12">
         <h1 class="page-header">GeoLocation <small>Native</small></h1>
-        
-      
-      <!-- populate div with data from api -->
-        <div class="well colortext">
-          <h1>My Curent Location:</h1>
-            <p id="myLocation">Getting Location...</p>
+        <!-- populate div with data from api -->
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">My Location</h3>
+          </div>
+          <div id="myLocation" class="panel-body colortext">
+          </div>
         </div>
-  
+        <div id="map"></div>
       </div><!-- end col -->
     </div><!-- end container -->
-
     <!-- jQuery -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- bootstrap -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/geo.js"></script> -->
+    <script src="js/map.js"></script>
   </body>
 </html>

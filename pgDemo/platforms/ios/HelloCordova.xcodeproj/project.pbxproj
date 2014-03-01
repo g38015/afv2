@@ -50,6 +50,7 @@
 		0DED7A184378411184D68A16 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4CD8FE52C69145C697F8C9C0 /* CDVNotification.bundle */; };
 		B95B7915B0924880B5B2436C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C4C703DA9845258FEC1103 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4A584E2428DF43F3926AB2B9 /* CDVVibration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0128F4D22F1340B6822C637F /* CDVVibration.m */; };
+		35EC5C0B7E45481FB84536A2 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D5B31AC884F5D92308194 /* CDVInAppBrowser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,8 @@
 		04C4C703DA9845258FEC1103 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		0128F4D22F1340B6822C637F /* CDVVibration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVVibration.m"; path = "org.apache.cordova.vibration/CDVVibration.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		D8E2F604F9204C8CB7CB2319 /* CDVVibration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVVibration.h"; path = "org.apache.cordova.vibration/CDVVibration.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		E22D5B31AC884F5D92308194 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVInAppBrowser.m"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		274E2812BA584A84914F80C4 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +271,8 @@
 				6223F35EED764F4A9FF2BF92 /* CDVNotification.h */,
 				0128F4D22F1340B6822C637F /* CDVVibration.m */,
 				D8E2F604F9204C8CB7CB2319 /* CDVVibration.h */,
+				E22D5B31AC884F5D92308194 /* CDVInAppBrowser.m */,
+				274E2812BA584A84914F80C4 /* CDVInAppBrowser.h */,
 			);
 			name = Plugins;
 			path = "HelloCordova/Plugins";
@@ -461,6 +466,7 @@
 				BE3D11742DB1452FB2969EAA /* CDVLocation.m in Sources */,
 				D6DB57EC9EBF42F6849AD799 /* CDVNotification.m in Sources */,
 				4A584E2428DF43F3926AB2B9 /* CDVVibration.m in Sources */,
+				35EC5C0B7E45481FB84536A2 /* CDVInAppBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
